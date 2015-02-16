@@ -1,9 +1,7 @@
 Getting and Cleaning Data - Course Project (for Peer Review)
 ============================================================
 
-
 ### Overview
-***
 
 This repo consists of the code and data for the course project for the Getting and Cleaning Data course project offered through Coursera and Johns Hopkins University.
 
