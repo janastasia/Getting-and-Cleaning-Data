@@ -29,9 +29,9 @@ The dataset used in run_analysis.R can be found directly here: https://d396qusza
 * We clean the column names of the subset by removing the "()" and "-" from the names and capitalize our column names.
 * We read and store the data from activity_labels.txt in our *activity* variable. We transform the values of *activity.label* and *join.label*.
 * We combine the *join.subject*, *join.label*, and *join.data* variables by column to get a new data frame and store it in *cleaned.data*. We name our columns "subject" and "activity". The "subject" column containst an integer ranging from 1 to 30 and the "activity" column contains 6 activity names (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING). The remaining columns contain measurements rangin from -1 to 1.
-* We write out our *cleaned.data* to "merged_data.txt" file.
+* We write out our *cleaned.data* to "data_merged.txt" file.
 * We generate a second data set with the average of each measurement, for each activity and each subject (*subject.len*, *activity.len*, and *column.len*) and store it in *result*.
-* We write *result* to "data_with_means.txt".
+* We write *result* to "means_data.txt".
 
 #### Variables from the original dataset, for each activity, and each subject
 

@@ -54,7 +54,7 @@ names(join.label) <- "activity"
 names(join.subject) <- "subject"
 cleaned.data <- cbind(join.subject, join.label, join.data)
 dim(cleaned.data) 
-write.table(cleaned.data, "merged_data.txt") # Output: our first dataset
+write.table(cleaned.data, "data_merged.txt") # Output: our first dataset
 
 # Step 5
 # Create a second, independent tidy data set with the average of each variable for each activity and each subject
@@ -77,11 +77,11 @@ for(i in 1:subject.len) {
     }
 }
 head(result)
-write.table(result, "data_with_means.txt") # Output: our second dataset
+write.table(result, "means_data.txt") # Output: our second dataset
 
 # Load this into RStudio using source("run_analysis.R")
 # Then load in our data_with_means.txt dataset using the following:
-# data <- read.table("./data_with_means.txt")
+# data <- read.table("./means_data.txt")
 # Let's test it with: 
 # data[1:12, 1:3]
 #
