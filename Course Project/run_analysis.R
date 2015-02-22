@@ -70,7 +70,7 @@ for(i in 1:subject.len) {
     }
 }
 head(result)
-write.table(result, "means_data.txt") # Output: our second dataset
+write.table(result, "means_data.txt", row.names = FALSE) # Output: our second dataset
 
 # Load this into RStudio using source("run_analysis.R")
 # Then load in our data_with_means.txt dataset using the following:
