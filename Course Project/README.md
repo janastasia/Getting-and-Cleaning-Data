@@ -30,6 +30,6 @@ To use run_analysis.R, you will need to follow the steps below.
 * Make sure that both the "data" folder and the run_analysis.R script are in your current working directory.
 * Use `source("run_analysis.R")` in RStudio to load the run_analysis.R file.
 * You'll find two output files in the current working directory:
-     * **merged_data.txt:** this contains a data frame called cleanedData with dimensions of 10299*68.
-     * **data_with_means.txt:**  this contains a data frame called result with dimensions of 180*68.
-* In RStudio, run command `data <- read.table("data_with_means.txt")` to read the file. If run properly, there should be 6 activities and 30 subjects in total. We will have 180 rows with all combinations for each of the 66 features.
+     * **data_merged.txt:** this contains a data frame called cleanedData with dimensions of 10299*68.
+     * **means_data.txt:**  this contains a data frame called result with dimensions of 180*68.
+* In RStudio, run command `data <- read.table("means_data.txt")` to read the file. If run properly, there should be 6 activities and 30 subjects in total. We will have 180 rows with all combinations for each of the 66 features.
