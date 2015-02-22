@@ -7,19 +7,14 @@
 
 train.data <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
 dim(train.data) # Original dimensions of X-train.txt: 7352*561
-head(train.data)
 train.label <- read.table("./data/UCI HAR Dataset/train/y_train.txt")
-table(train.label)
 train.subject <- read.table("./data/UCI HAR Dataset/train/subject_train.txt")
 test.data <- read.table("./data/UCI HAR Dataset/test/X_test.txt")
-dim(test.data) # Dimensions of X_test.txt: 2947*561
 test.label <- read.table("./data/UCI HAR Dataset/test/y_test.txt")
-table(test.label)
 test.subject <- read.table("./data/UCI HAR Dataset/test/subject_test.txt")
 join.data <- rbind(train.data, test.data)
 dim(join.data) # Dimensions of the joinData: 10299*561
 join.label <- rbind(train.label, test.label)
-dim(join.label)
 join.subject <- rbind(train.subject, test.subject)
 dim(join.subject) # Our new dimensions: 10299*1
 
@@ -27,9 +22,7 @@ dim(join.subject) # Our new dimensions: 10299*1
 # This step extracts only the measurements on the mean and standard deviation for each measurement.
 
 features <- read.table("./data/UCI HAR Dataset/features.txt")
-dim(features) 
 mean.stdindices <- grep("mean\\(\\)|std\\(\\)", features[, 2])
-length(mean.stdindices) 
 join.data <- join.data[, mean.stdindices]
 dim(join.data) # Our new dimensions: 10299*66
 names(join.data) <- gsub("\\(\\)", "", features[mean.stdindices, 2]) # Cleaning our data: remove "()"
